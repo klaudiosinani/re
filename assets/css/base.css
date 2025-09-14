@@ -1,0 +1,81 @@
+@layer base {
+  body {
+    @apply flex min-h-[100svh] flex-col bg-skin-fill font-mono text-skin-base selection:bg-skin-accent/70 selection:text-skin-inverted;
+    background-color: rgb(var(--color-fill));
+    color: rgb(var(--color-text-base));
+    font-family: "IBM Plex Mono", monospace !important;
+  }
+
+  html[data-theme="dark"] body {
+    color: rgb(var(--color-text-base));
+  }
+
+  html {
+    @apply overflow-y-scroll scroll-smooth;
+  }
+
+  a {
+    @apply break-words decoration-solid underline-offset-8 outline-2 outline-offset-1 focus-visible:no-underline focus-visible:outline-dashed !important;
+    color: rgb(var(--color-text-base));
+    outline-color: rgb(var(--color-fill));
+  }
+
+  a:hover {
+    color: rgb(var(--color-accent));
+  }
+
+  svg {
+    @apply inline-block h-6 w-6 group-hover:fill-skin-accent;
+  }
+
+  svg.icon-tabler {
+    @apply inline-block h-6 w-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgb(var(--color-fill));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--color-card));
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(var(--color-card-muted));
+  }
+
+  ::selection {
+    background-color: rgba(var(--color-selection-bg), 0.7);
+    color: rgb(var(--color-selection-text));
+  }
+
+  ::-moz-selection {
+    background-color: rgba(var(--color-selection-bg), 0.7);
+    color: rgb(var(--color-selection-text));
+  }
+  
+  /* Theme toggle icons */
+  #sun-svg,
+  html[data-theme="dark"] #moon-svg {
+    display: none;
+    fill: rgb(var(--color-text-base));
+  }
+
+  #moon-svg,
+  html[data-theme="dark"] #sun-svg {
+    display: block;
+    fill: rgb(var(--color-text-base));
+  }
+  
+  .separator-line {
+    border-color: rgba(var(--color-border), 1);
+  }
+
+  .focus-outline {
+    outline-color: rgb(var(--color-fill));
+  }
+}

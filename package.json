@@ -1,0 +1,19 @@
+{
+  "name": "re",
+  "version": "0.1.0",
+  "description": "Minimalistic Jekyll theme for GitHub Pages",
+  "scripts": {
+    "build:css": "postcss assets/css/main.css -o assets/css/styles.css",
+    "watch:css": "postcss assets/css/main.css -o assets/css/styles.css --watch",
+    "serve": "bundle exec jekyll serve --livereload"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-nesting": "^12.0.1",
+    "tailwindcss": "^3.3.5"
+  }
+}

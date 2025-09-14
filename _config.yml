@@ -1,0 +1,27 @@
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "codeblock"
+    block:
+      wrap: true
+
+plugins:
+  - jekyll-github-metadata
+  - jekyll-remote-theme
+
+defaults:
+  - 
+    scope:
+      path: "README.md"
+    values:
+      permalink: "/"
+      layout: "default"
+  -
+    scope:
+      path: "readme.md" 
+    values:
+      permalink: "/"
+      layout: "default"

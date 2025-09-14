@@ -1,0 +1,9 @@
+{% capture description %}
+  {% if site.github.project_tagline %}
+    {{ site.github.project_tagline }}
+  {% else %}
+    {{ site.description }}
+  {% endif %}
+{% endcapture %}
+
+<meta name="description" content="{{ description | strip }}">

@@ -1,0 +1,35 @@
+@layer base {
+  #theme-btn {
+    @apply p-3 sm:p-1;
+  }
+  
+  #theme-btn svg {
+    @apply scale-125 hover:rotate-12 sm:scale-100;
+  }
+
+  .link-button {
+    @apply p-2 hover:rotate-6 sm:p-1;
+  }
+
+  .link-button svg {
+    fill: rgb(var(--color-text-base));
+  }
+}
+
+@layer components {
+  .menu-icon line {
+    @apply transition-opacity duration-75 ease-in-out;
+  }
+  
+  .menu-icon .close {
+    opacity: 0;
+  }
+  
+  .menu-icon.is-active .line {
+    @apply opacity-0;
+  }
+  
+  .menu-icon.is-active .close {
+    @apply opacity-100;
+  }
+}

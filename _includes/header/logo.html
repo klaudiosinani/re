@@ -1,0 +1,11 @@
+{% capture author %}
+  {% if site.github.owner_display_name %}
+    {{ site.github.owner_display_name }}
+  {% else %}
+    {{ site.author }}
+  {% endif %}
+{% endcapture %}
+
+<a href="{{ '/' | relative_url }}" class="logo whitespace-nowrap">
+    {{ author }}
+</a>

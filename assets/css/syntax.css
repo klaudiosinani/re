@@ -1,0 +1,175 @@
+.codeblock {
+  font-family: "JetBrains Mono", monospace !important;
+  background: var(--codeblock-color-background) !important;
+  color: var(--codeblock-color-text) !important;
+  border-color: rgb(var(--color-border)) !important;
+  border-radius: 0.25rem;
+  overflow: auto;
+  font-size: 1em;
+  line-height: 1.5;
+  display: block;
+  width: 100%;
+}
+
+/* Apply Dark Theme */
+html[data-theme="dark"] .codeblock {
+  background: var(--codeblock-color-background) !important;
+  color: var(--codeblock-color-text) !important;
+  border-color: rgb(var(--color-border)) !important;
+}
+
+.codeblock span {
+  color: var(--codeblock-color-text);
+}
+
+html[data-theme="dark"] .codeblock span {
+  color: var(--codeblock-color-text);
+}
+
+/* Keywords */
+.codeblock .k,
+.codeblock .kd,
+.codeblock .kn,
+.codeblock .kp,
+.codeblock .kr,
+.codeblock .kt {
+  color: var(--codeblock-token-keyword);
+}
+html[data-theme="dark"] .codeblock .k,
+html[data-theme="dark"] .codeblock .kd,
+html[data-theme="dark"] .codeblock .kn,
+html[data-theme="dark"] .codeblock .kp,
+html[data-theme="dark"] .codeblock .kr,
+html[data-theme="dark"] .codeblock .kt {
+  color: var(--codeblock-token-keyword);
+}
+
+/* Strings */
+.codeblock .s,
+.codeblock .sa,
+.codeblock .sb,
+.codeblock .sc,
+.codeblock .dl,
+.codeblock .sd,
+.codeblock .s2,
+.codeblock .sh,
+.codeblock .sx,
+.codeblock .s1,
+.codeblock .sr {
+  color: var(--codeblock-token-string);
+}
+
+html[data-theme="dark"] .codeblock .s,
+html[data-theme="dark"] .codeblock .sa,
+html[data-theme="dark"] .codeblock .sb,
+html[data-theme="dark"] .codeblock .sc,
+html[data-theme="dark"] .codeblock .dl,
+html[data-theme="dark"] .codeblock .sd,
+html[data-theme="dark"] .codeblock .s2,
+html[data-theme="dark"] .codeblock .sh,
+html[data-theme="dark"] .codeblock .sx,
+html[data-theme="dark"] .codeblock .s1,
+html[data-theme="dark"] .codeblock .sr {
+  color: var(--codeblock-token-string);
+}
+
+/* Numbers and constants */
+.codeblock .m,
+.codeblock .mb,
+.codeblock .mf,
+.codeblock .mh,
+.codeblock .mi,
+.codeblock .mo,
+.codeblock .il,
+.codeblock .no {
+  color: var(--codeblock-token-constant);
+}
+
+html[data-theme="dark"] .codeblock .m,
+html[data-theme="dark"] .codeblock .mb,
+html[data-theme="dark"] .codeblock .mf,
+html[data-theme="dark"] .codeblock .mh,
+html[data-theme="dark"] .codeblock .mi,
+html[data-theme="dark"] .codeblock .mo,
+html[data-theme="dark"] .codeblock .il,
+html[data-theme="dark"] .codeblock .no {
+  color: var(--codeblock-token-constant);
+}
+
+/* Functions and methods */
+.codeblock .na,
+.codeblock .nb,
+.codeblock .nc,
+.codeblock .nf,
+.codeblock .fm {
+  color: var(--codeblock-token-function);
+}
+html[data-theme="dark"] .codeblock .na,
+html[data-theme="dark"] .codeblock .nb,
+html[data-theme="dark"] .codeblock .nc,
+html[data-theme="dark"] .codeblock .nf,
+html[data-theme="dark"] .codeblock .fm {
+  color: var(--codeblock-token-function);
+}
+
+/* Comments */
+.codeblock .c,
+.codeblock .ch,
+.codeblock .cm,
+.codeblock .cp,
+.codeblock .cpf,
+.codeblock .c1,
+.codeblock .cs {
+  color: var(--codeblock-token-comment);
+  font-style: italic;
+}
+html[data-theme="dark"] .codeblock .c,
+html[data-theme="dark"] .codeblock .ch,
+html[data-theme="dark"] .codeblock .cm,
+html[data-theme="dark"] .codeblock .cp,
+html[data-theme="dark"] .codeblock .cpf,
+html[data-theme="dark"] .codeblock .c1,
+html[data-theme="dark"] .codeblock .cs {
+  color: var(--codeblock-token-comment);
+}
+
+/* Operators, punctuation */
+.codeblock .o,
+.codeblock .ow,
+.codeblock .p {
+  color: var(--codeblock-token-punctuation);
+}
+html[data-theme="dark"] .codeblock .o,
+html[data-theme="dark"] .codeblock .ow,
+html[data-theme="dark"] .codeblock .p {
+  color: var(--codeblock-token-punctuation);
+}
+
+/* Variables */
+.codeblock .n,
+.codeblock .nv,
+.codeblock .vc,
+.codeblock .vg,
+.codeblock .vi,
+.codeblock .vm {
+  color: var(--codeblock-color-text);
+}
+html[data-theme="dark"] .codeblock .n,
+html[data-theme="dark"] .codeblock .nv,
+html[data-theme="dark"] .codeblock .vc,
+html[data-theme="dark"] .codeblock .vg,
+html[data-theme="dark"] .codeblock .vi,
+html[data-theme="dark"] .codeblock .vm {
+  color: var(--codeblock-color-text);
+}
+
+/* Code block selection - optional override */
+.codeblock ::selection {
+  background-color: rgba(var(--color-selection-bg), 0.7);
+  color: rgb(var(--color-selection-text));
+}
+
+.codeblock ::-moz-selection {
+  background-color: rgb(var(--color-selection-bg), 0.7);
+  color: rgb(var(--color-selection-text));
+}

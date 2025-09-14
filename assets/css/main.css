@@ -1,0 +1,13 @@
+@import "variables.css";
+@import "base.css";
+@import "typography.css";
+@import "components/navigation.css";
+@import "components/buttons.css";
+@import "components/code.css";
+@import "layout.css";
+@import "utilities.css";
+@import "syntax.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

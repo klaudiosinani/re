@@ -1,0 +1,49 @@
+@layer base {
+  :root,
+  html[data-theme="light"] {
+    --color-fill: 251, 254, 251;
+    --color-text-base: 40, 39, 40;
+    --color-accent: 0, 16, 17;
+    --color-card: 230, 230, 230;
+    --color-card-muted: 205, 205, 205;
+    --color-border: 236, 233, 233;
+    --color-selection-bg: var(--color-accent);
+    --color-selection-text: 251, 254, 251;
+
+    --codeblock-color-text: #414141;
+    --codeblock-color-background: #ffffff;
+    --codeblock-token-constant: #1976d2;
+    --codeblock-token-string: #22863a;
+    --codeblock-token-comment: #aaa;
+    --codeblock-token-keyword: #d32f2f;
+    --codeblock-token-parameter: #ff9800;
+    --codeblock-token-function: #6f42c1;
+    --codeblock-token-string-expression: #22863a;
+    --codeblock-token-punctuation: #212121;
+    --codeblock-token-link: #22863a;
+  }
+
+  html[data-theme="dark"] {
+    --color-fill: 0, 16, 17;
+    --color-text-base: 230, 230, 230;
+    --color-accent: 251, 254, 251;
+    --color-card: 63, 75, 90;
+    --color-card-muted: 89, 107, 129;
+    --color-border: 59, 70, 85;
+
+    --color-selection-bg: var(--color-accent);
+    --color-selection-text: 0, 16, 17;
+
+    --codeblock-color-text: #d4d4d4;
+    --codeblock-color-background: #011627;
+    --codeblock-token-constant: #79c0ff;
+    --codeblock-token-string: #a5d6ff;
+    --codeblock-token-comment: #8b949e;
+    --codeblock-token-keyword: #ff7b72;
+    --codeblock-token-parameter: #ffa657;
+    --codeblock-token-function: #d2a8ff;
+    --codeblock-token-string-expression: #a5d6ff;
+    --codeblock-token-punctuation: #d4d4d4;
+    --codeblock-token-link: #a5d6ff;
+  }
+}

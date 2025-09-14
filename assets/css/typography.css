@@ -1,0 +1,51 @@
+@layer base {
+  #main-content h1 {
+    @apply text-2xl font-semibold sm:text-3xl;
+  }
+
+  #main-content p {
+    @apply mb-6 mt-2;
+  }
+
+  html[data-theme="dark"] .prose,
+  html[data-theme="dark"] .prose h1,
+  html[data-theme="dark"] .prose h2,
+  html[data-theme="dark"] .prose h3,
+  html[data-theme="dark"] .prose h4,
+  html[data-theme="dark"] .prose p,
+  html[data-theme="dark"] .prose strong,
+  html[data-theme="dark"] .prose li,
+  html[data-theme="dark"] .prose a:not(:hover) {
+    color: rgb(var(--color-text-base));
+  }
+  
+  li::marker {
+    color: rgb(var(--color-text-base)) !important;
+  }
+}
+
+@layer components {
+  .app-prose {
+    @apply prose;
+
+    font-family: "IBM Plex Mono", monospace !important;
+
+    h1, h2, h3, h4, h5, h6 {
+      @apply mb-3;
+      color: rgb(var(--color-text-base));
+    }
+
+    p, strong, ol, ul, figcaption {
+      color: rgb(var(--color-text-base));
+    }
+
+    blockquote {
+      @apply border-l-4 opacity-80 pl-4;
+      border-left-color: rgb(var(--color-accent) / 0.5);
+    }
+
+    ul {
+      @apply overflow-x-clip;
+    }
+  }
+}

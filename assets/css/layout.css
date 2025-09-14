@@ -1,0 +1,26 @@
+@layer base {
+  #main-content {
+    @apply mx-auto w-full max-w-app px-4 pb-4;
+  }
+
+  section,
+  footer {
+    @apply mx-auto max-w-app px-4;
+  }
+  
+  footer {
+    @apply w-full mb-8;
+  }
+
+  .footer-wrapper {
+    @apply flex flex-col items-center justify-between py-6 sm:flex-row-reverse sm:py-4;
+  }
+  
+  .social-icons {
+    @apply flex-wrap justify-center gap-1;
+  }
+  
+  .separator {
+    @apply hidden sm:inline;
+  }
+}

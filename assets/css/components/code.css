@@ -1,0 +1,21 @@
+@layer base {
+  pre:has(code) {
+    @apply border border-skin-line;
+  }
+
+  code,
+  blockquote {
+    word-wrap: break-word;
+  }
+
+  pre > code {
+    white-space: pre;
+  }
+
+  code.language-plaintext {
+    border-radius: 0.25rem;
+    background-color: rgba(var(--color-card), 0.75);
+    padding: 0.25rem;
+    color: rgb(var(--color-text-base));
+  }
+}

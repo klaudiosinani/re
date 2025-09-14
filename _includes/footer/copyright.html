@@ -1,0 +1,13 @@
+{% capture year %}
+    {{ site.time | date: '%Y' }}
+{% endcapture %}
+
+{% capture repoStartYear %}
+  {% if site.github.owner.created_at %}
+    {{ site.github.owner.created_at | date: '%Y' }}
+  {% endif %}
+{% endcapture %}
+
+<div class="copyright-wrapper">
+    <span>Copyright &#169; {{ repoStartYear }} - {{ year }}</span>
+</div>
