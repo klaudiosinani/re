@@ -1,6 +1,6 @@
 {
   "name": "re",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Minimalistic Jekyll theme for GitHub Pages",
   "scripts": {
     "build:css": "postcss assets/css/main.css -o assets/css/styles.css",
