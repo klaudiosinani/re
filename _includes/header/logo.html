@@ -1,11 +1,24 @@
-{% capture author %}
-  {% if site.github.owner_display_name %}
-    {{ site.github.owner_display_name }}
-  {% else %}
-    {{ site.author }}
-  {% endif %}
-{% endcapture %}
+{% assign logo_text = site.github.owner_display_name | default: site.owner | default: site.github.repository_owner %}
 
-<a href="{{ '/' | relative_url }}" class="logo whitespace-nowrap">
-    {{ author }}
-</a>
+{% if site.re.owner_website %}
+  {% assign raw_url = site.re.owner_website %}
+{% elsif site.github.owner.blog %}
+  {% assign raw_url = site.github.owner.blog %}
+{% elsif site.github.owner_url %}
+  {% assign raw_url = site.github.owner_url %}
+{% else %}
+  {% assign raw_url = "/" %}
+{% endif %}
+
+{% assign first_char = raw_url | slice: 0, 1 %}
+
+{% if raw_url == "/" %}
+<a class="logo whitespace-nowrap" href="/">{{ logo_text }}</a>
+{% elsif raw_url contains "://" %}
+<a class="logo whitespace-nowrap" href="{{ raw_url }}">{{ logo_text }}</a>
+{% elsif first_char == "/" %}
+<a class="logo whitespace-nowrap" href="{{ raw_url }}">{{ logo_text }}</a>
+{% else %}
+{% capture full_url %}https://{{ raw_url }}{% endcapture %}
+<a class="logo whitespace-nowrap" href="{{ full_url }}">{{ logo_text }}</a>
+{% endif %}
