@@ -987,6 +987,12 @@ code.language-plaintext {
     padding: 0.25rem;
     color: rgb(var(--color-text-base));
   }
+details {
+    padding-top: 1em;
+  }
+summary {
+    cursor: pointer;
+  }
 #main-content {
   margin-left: auto;
   margin-right: auto;
