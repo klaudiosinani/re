@@ -1,3 +1,4 @@
+# Jekyll
 *.gem
 .bundle
 .jekyll-cache
@@ -7,5 +8,14 @@ _site
 Gemfile.lock
 vendor
 
-# dependencies
+# Dependencies
 node_modules
+
+# OS
+.DS_Store
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
