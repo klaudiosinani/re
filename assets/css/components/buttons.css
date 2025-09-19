@@ -14,6 +14,10 @@
   .link-button svg {
     fill: rgb(var(--color-text-base));
   }
+
+  .link-button:hover svg {
+    fill: rgb(var(--color-text-base));
+  }
 }
 
 @layer components {

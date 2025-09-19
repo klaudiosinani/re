@@ -969,6 +969,9 @@ nav button svg:hover {
 .link-button svg {
     fill: rgb(var(--color-text-base));
   }
+.link-button:hover svg {
+    fill: rgb(var(--color-text-base));
+  }
 pre:has(code) {
   border-width: 1px;
   --tw-border-opacity: 1;
