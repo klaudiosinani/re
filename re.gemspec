@@ -23,6 +23,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "jekyll", "~> 4.4"
   spec.add_runtime_dependency "jekyll-github-metadata", "~> 2.16.1"
+  spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
   spec.add_runtime_dependency "jekyll-remote-theme", "~> 0.4.3"
   spec.add_runtime_dependency "faraday-retry", "~> 2.0"
 
