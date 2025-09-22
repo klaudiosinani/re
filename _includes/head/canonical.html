@@ -1,16 +1,5 @@
-{% capture raw_url %}
-    {{ page.url | replace:'index.html','' }}
+{% capture url %}
+  {{ page.url | replace:'index.html','' | absolute_url }}
 {% endcapture %}
 
-{% if raw_url == "" %}
-    {% assign raw_url = "/" %}
-{% endif %}
-
-{% capture canonical_url %}
-    {{ raw_url | absolute_url }}
-{% endcapture %}
-
-<link
-rel="canonical"
-href="{{ page.url | replace:'index.html','' | absolute_url }}"
-/>
+<link rel="canonical" href="{{ url | strip }}" />
