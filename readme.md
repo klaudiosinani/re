@@ -14,7 +14,8 @@
 - Customizable
 - Responsive design
 - Syntax highlighting
-- Light & dark mode 
+- Light & dark theme
+- Follows system theme
 
 ## Contents
 
