@@ -89,7 +89,7 @@ re:
 - Type: `String`
   - Accepts:
     - Local paths; e.g. `/assets/images/favicon.png`
-    - Remote URLs; e.g., `https://raw.githubusercontent.com/username/repo/branch/path/to/favicon.png`
+    - Remote URLs; e.g. `https://raw.githubusercontent.com/username/repo/branch/path/to/favicon.png`
 - Description: Path to the favicon file for the website
 - Default value: None; if not provided by the user the html tag will not be rendered
 

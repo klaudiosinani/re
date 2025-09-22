@@ -9,6 +9,9 @@ plugins:
   - jekyll-remote-theme
   - jekyll-sitemap
 
+re:
+  favicon: https://raw.githubusercontent.com/klaudiosinani/klaudiosinani.github.io/refs/heads/master/public/favicon.png
+
 defaults:
   - 
     scope:
