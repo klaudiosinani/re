@@ -1,24 +1,65 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const themeToggle = document.getElementById("theme-btn");
+const primaryColorScheme = "";
 
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      const currentTheme = document.documentElement.getAttribute("data-theme");
-      const newTheme = currentTheme === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", newTheme);
-      document
-        .getElementById("theme-btn")
-        ?.setAttribute("aria-label", newTheme);
-      localStorage.setItem("theme", newTheme);
-    });
+const currentTheme = localStorage.getItem("theme");
+
+function getPreferTheme() {
+  if (currentTheme) {
+    return currentTheme;
   }
 
-  // Initialize theme from localStorage or system preference
-  const savedTheme = localStorage.getItem("theme");
-
-  if (savedTheme) {
-    document.documentElement.setAttribute("data-theme", savedTheme);
-  } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    document.documentElement.setAttribute("data-theme", "dark");
+  if (primaryColorScheme) {
+    return primaryColorScheme;
   }
-});
+
+  return globalThis.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+}
+
+function setThemeFeature() {
+  reflectPreference();
+
+  document.querySelector("#theme-btn")?.addEventListener("click", () => {
+    themeValue = themeValue === "light" ? "dark" : "light";
+    setPreference();
+  });
+}
+
+let themeValue = getPreferTheme();
+
+function setPreference() {
+  localStorage.setItem("theme", themeValue);
+  reflectPreference();
+}
+
+function reflectPreference() {
+  const htmlDocument = document.firstElementChild;
+  htmlDocument.dataset.theme = themeValue;
+
+  document.querySelector("#theme-btn")?.setAttribute("aria-label", themeValue);
+
+  const body = document.body;
+
+  if (body) {
+    const computedStyles = globalThis.getComputedStyle(body);
+
+    const bgColor = computedStyles.backgroundColor;
+
+    document
+      .querySelector("meta[name='theme-color']")
+      ?.setAttribute("content", bgColor);
+  }
+}
+
+reflectPreference();
+
+globalThis.onload = () => {
+  setThemeFeature();
+};
+
+globalThis
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", ({ matches: isDark }) => {
+    themeValue = isDark ? "dark" : "light";
+    setPreference();
+  });
