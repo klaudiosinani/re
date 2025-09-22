@@ -24,7 +24,6 @@
 - [Team](#team)
 - [License](#license)
 
-
 ## Install
 
 1. Create or edit your repository's `_config.yml`:

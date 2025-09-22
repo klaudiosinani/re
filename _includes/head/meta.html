@@ -1,0 +1,39 @@
+{% capture title %}
+  {% if site.github.project_title %}
+    {{ site.github.project_title }}
+  {% else %}
+    {{ site.title }}
+  {% endif %}
+{% endcapture %}
+
+{% capture description %}
+  {% if site.github.project_tagline %}
+    {{ site.github.project_tagline }}
+  {% else %}
+    {{ site.description }}
+  {% endif %}
+{% endcapture %}
+
+{% capture author %}
+  {% if site.github.owner_display_name %}
+    {{ site.github.owner_display_name }}
+  {% else %}
+    {{ site.author }}
+  {% endif %}
+{% endcapture %}
+
+<title>{{ title | strip | downcase | capitalize }} - {{ description | strip }} - {{ author | strip }}</title>
+<meta name="author" content="{{ author | strip }}">
+<meta name="title" content="{{ title | strip | downcase | capitalize }} - {{ description | strip }} - {{ author | strip }}">
+<meta name="description" content="{{ description | strip }}">
+
+<meta property="og:title" content="{{ title | strip | downcase | capitalize }} - {{ description | strip }} - {{ author | strip }}">
+<meta property="og:description" content="{{ description | strip }}">
+<meta property="og:url" content="https://klaudiosinani.com/">
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://klaudiosinani.com/">
+<meta property="twitter:title" content="{{ title | strip | downcase | capitalize }} - {{ description | strip }} - {{ author | strip }}">
+<meta property="twitter:description" content="{{ description | strip }}">
+
+<meta name="theme-color" content="">
