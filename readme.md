@@ -59,9 +59,12 @@ plugins:
 
 re:
   owner_website: "https://my-website.com"
+  favicon: /assets/img/favicon.png
 ```
 
 ### All Options
+
+#### `re.owner_website`
 
 - Identifier: `owner_website`
 - Type: `String`
@@ -79,6 +82,16 @@ re:
     - Source: Internal fallback
     - Category: Tertiary default value used if no GitHub information is available
     - Description: Links to the root of the current project site
+
+#### `re.favicon`
+
+- Identifier: `favicon`
+- Type: `String`
+  - Accepts:
+    - Local paths; e.g. `/assets/images/favicon.png`
+    - Remote URLs; e.g., `https://raw.githubusercontent.com/username/repo/branch/path/to/favicon.png`
+- Description: Path to the favicon file for the website
+- Default value: None; if not provided by the user the html tag will not be rendered
 
 ## Team
 

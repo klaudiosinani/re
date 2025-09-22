@@ -1,0 +1,9 @@
+{% if site.re.favicon %}
+  {% assign favicon_path = site.re.favicon %}
+
+  {% if favicon_path contains "http://" or favicon_path contains "https://" %}
+    <link rel="icon" type="image/svg+xml" href="{{ favicon_path | strip }}" />
+  {% else %}
+    <link rel="icon" type="image/svg+xml" href="{{ favicon_path | relative_url | strip }}" />
+  {% endif %}
+{% endif %}
