@@ -34,6 +34,7 @@ remote_theme: klaudiosinani/re
 plugins:
   - jekyll-github-metadata
   - jekyll-remote-theme
+    - jekyll-sitemap
 ```
 
 2. Enable GitHub Pages in your repository settings
