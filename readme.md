@@ -61,6 +61,8 @@ plugins:
 re:
   owner_website: "https://my-website.com"
   favicon: /assets/img/favicon.png
+  simpleanalytics:
+    enabled: true
 ```
 
 ### All Options
@@ -93,6 +95,13 @@ re:
     - Remote URLs; e.g. `https://raw.githubusercontent.com/username/repo/branch/path/to/favicon.png`
 - Description: Path to the favicon file for the website
 - Default value: None; if not provided by the user the html tag will not be rendered
+
+#### `re.simpleanalytics.enabled`
+
+- Identifier: `simpleanalytics.enabled`
+- Type: `Boolean`
+- Description: Enables integration with Simple Analytics by injecting the tracking script in the DOM head
+- Default value: `false`
 
 ## Team
 
