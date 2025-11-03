@@ -11,6 +11,8 @@ plugins:
 
 re:
   favicon: https://raw.githubusercontent.com/klaudiosinani/klaudiosinani.github.io/refs/heads/master/public/favicon.png
+  simpleanalytics:
+    enabled: true
 
 defaults:
   - 
